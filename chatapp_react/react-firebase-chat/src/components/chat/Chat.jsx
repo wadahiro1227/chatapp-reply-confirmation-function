@@ -22,7 +22,7 @@ const Chat = () =>{
         try {
             const sendUserId = 1; // サンプルとして固定値。実際にはユーザーIDを使用
             const toUserId = 2;   // 宛先も固定値。実際には動的な値にする
-            const response = await fetch('http://localhost:3001/api/messages', {
+            const response = await fetch('http://165.242.107.160:3001/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -138,9 +138,21 @@ const Chat = () =>{
                     <div className="picker">
                         <EmojiPicker open={open} onEmojiClick={handleEmoji}/>
                     </div>
-                    
                 </div>
-                <button className="sendButton" onClick={handleSend}>Send</button>
+                <div className="sendButtons">
+                    <img 
+                    src="./send.png"
+                    alt="Send Mention" 
+                    className="sendButton" 
+                    onClick={handleSend} 
+                    />
+                    <img 
+                    src="./send_mention.png" 
+                    alt="Send Message" 
+                    className="sendButton" 
+                    onClick={handleSend} 
+                    />
+            </div>
             </div>
         </div>
     )

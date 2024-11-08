@@ -17,6 +17,7 @@ var mentionRouter = require('./routes/mentions');
 var threadRouter = require('./routes/threads');
 var app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -51,4 +52,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var PORT = process.env.PORT || 3001;
+app.listen(PORT, '0.0.0.0', () => {   console.log(`Server is running on http://0.0.0.0:${PORT}`); });
+
 module.exports = app;
+
+

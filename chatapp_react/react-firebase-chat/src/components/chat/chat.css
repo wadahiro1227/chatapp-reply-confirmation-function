@@ -161,16 +161,14 @@
 
         }
 
-
-
-        .sendButton{
-            background-color: #5183fe;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor:pointer;
-
-        }
-
+        .sendButtons {
+            display: flex;
+            gap: 5px; /* ボタンの間隔を調整 */
+          }
+          
+          .sendButton {
+            width: 30px; /* ボタン画像のサイズ */
+            height: 30px;
+            cursor: pointer;
+          }
     }
